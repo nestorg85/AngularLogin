@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  templateUrl: "./app.component.html",
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'untitled';
+  submittedForm({username, password}: Login): void {
+    alert(`${username}:${password}`)
+  }
+}
+
+interface Login {
+  username: string;
+  password: string;
 }
